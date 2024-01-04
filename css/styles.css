@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --background: white;
+  --window-border: rgb(28, 27, 34);
+  --dock: rgba(28, 27, 34, 0.25);
+  --dock-popup: rgba(28, 27, 34, 0.9);
+}
+
+html,
+body,
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: figtree;
+}
+
+.font-title {
+  font-style: normal;
+  font-weight: 400;
+}
+
+.font-text {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+}
+
+.background {
+  height: 100vh;
+  padding: 25px;
+  background-color: var(--background);
+}
+
+.screen {
+  height: 90%;
+  overflow: hidden;
+  background-color: var(--window-border);
+
+  border: solid;
+  border-width: 5px;
+  border-radius: 10px;
+  border-color: var(--window-border);
+}
+
+.title-bar {
+  width: 100%;
+  height: 25px;
+  padding: 5px;
+  padding-top: 0px;
+  background-color: var(--window-border);
+}
+
+#close {
+  background-color: rgb(255, 74, 81);
+}
+
+#iconize {
+  background-color: rgb(255, 168, 63);
+}
+
+#expand {
+  background-color: rgb(0, 194, 73);
+}
+
+.title-button {
+  margin: auto;
+  margin-right: 5px;
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  border: hidden;
+}
+
+.title-button:hover {
+  filter: brightness(85%);
+}
+
+.title-button-icon {
+  visibility: hidden;
+  color: var(--window-border);
+  opacity: 50%;
+}
+
+.title-button:hover > .title-button-icon {
+  visibility: visible;
+}
+
+.title-text {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+  text-align: center;
+  color: white;
+  font-weight: 500;
+}
+
+.content {
+  height: 100%;
+  width: 100%;
+  padding: 5px;
+  background-color: white;
+  overflow-y: auto;
+}
+
+.dock {
+  width: fit-content;
+  padding-left: 5px;
+  padding-right: 5px;
+
+  margin: auto;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  height: 90px;
+
+  border: solid;
+  border-width: 2px;
+  border-radius: 25px;
+  border-color: gray;
+  background-color: var(--dock);
+}
+
+.dock-app {
+  width: 65px;
+  height: 65px;
+  margin: 10px;
+  border: hidden;
+  border-radius: 15px;
+  background-color: white;
+}
+
+.dock-app-label {
+  position: absolute;
+  width: fit-content;
+  white-space: nowrap;
+
+  transform: translateX(-50%);
+  bottom: 110px;
+
+  padding: 5px;
+  text-align: center;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  color: white;
+  border-radius: 5px;
+
+  background-color: var(--dock-popup);
+  visibility: hidden;
+}
+
+.dock-app-label::after {
+  content: "";
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid var(--dock-popup);
+  position: absolute;
+  left: calc(50% - 10px);
+  top: 100%;
+}
+
+.dock-app:hover > .dock-app-label {
+  visibility: visible;
+}
+
+.social-media-button {
+  padding: 10px;
+  font-size: 25px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 5px;
+}
+
+.social-media-button:hover {
+  filter: brightness(85%);
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-github {
+  background: #24292e;
+  color: white;
+}
+
+.fa-itch-io {
+  background: #fa5c5c;
+  color: white;
+}
+
+.fa-x-twitter {
+  background: #000000;
+  color: white;
+}
